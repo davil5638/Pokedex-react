@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
+import "./navbar.css";
+import imagem from "../../assets/images/logo.png";
 
-export default Navbar() {
+export default function Navbar() {
   return (
     <>
       <nav id="menu">
         <div class="logo">
-            <a href="">Logo </a> 
-        </div>
-        <div class="nome">
-            <h2>Poke.search</h2>
+          <a href="#">
+            <img src={imagem} />
+          </a>
         </div>
       </nav>
     </>
-  )
+  );
 }
+[]

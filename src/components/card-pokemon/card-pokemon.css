@@ -1,0 +1,103 @@
+/* Container */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: auto;
+  width: 80%;
+  margin-top: 90px;
+}
+
+/* Cards */
+
+.galeriapokemons {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+  0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  height: 350px;
+  cursor: pointer;
+}
+
+.galeriapokemons:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+  0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  flex-direction: column;
+  
+}
+
+/* Imagens */
+
+.pokebola {
+  position: absolute;
+  right: 4px;
+  top: -38px;
+  width: 40px !important;
+}
+
+.cards img {
+  width: 70%;
+  align-self: center;
+  margin: 40px 0;
+}
+
+.cards .pokemon:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+  transition: 0.5s ;
+}
+
+/* Texto do card */
+
+.texto-cards h1 {
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  font: 30px Roboto;
+  border-top: 2px solid rgb(204, 199, 199);
+  cursor: default;
+}
+
+.texto-cards h1:hover {
+  color: rgb(194, 201, 94);
+  transition: 0.3s ease-in-out;
+}
+
+/* Elementos */
+
+.elementos {
+  font: 25px Roboto;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.cor-eletric {
+  background-color:#eed535;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cor-water {
+  background-color: #4592c4;
+  border-radius: 10px;
+  padding: 10px;
+}

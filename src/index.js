@@ -1,15 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import navbar from './components/navbar/navbar'
+import React from "react";
+import ReactDOM from "react-dom";
+import Navbar from "./components/navbar/navbar";
+import Card from "./components/card-pokemon/card-pokemon";
 
-ReactDOM.render(<div>
-  <navbar></navbar>
-</div>  , document.getElementById('root'));
+ReactDOM.render(
+  <div>
+    <Navbar></Navbar>
+    <div class="container">
+      <Card name="Card1" />
+      <Card name="Card2" />
+      <Card name="Card3" />
+      <Card name="Card4" />
+      <Card name="Card5" />
+      <Card name="Card6" />
+      <Card name="Card7" />
+      <Card name="Card8" />
+      <Card name="Card9" />
+      <Card name="Card10" />
+    </div>
+  </div>,
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  document.getElementById("root")
+);
