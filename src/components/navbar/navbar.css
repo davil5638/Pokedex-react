@@ -9,36 +9,31 @@ html {
   font-size: 93.75%;
 }
 body {
-  background: #e2e1e0;
-  font-family: 'Mohave', sans-serif;
+  background: #e2dfdf;
+  font-family: "Mohave", sans-serif;
 }
 
 /* header */
 
 #menu {
   width: 100%;
-  background-color: #0c2a4d;
   height: 400px;
   display: flex;
   position: relative;
   padding-top: 30px;
-  
-
-  
 }
 
 .logo {
-  padding: 5px 50px;
   z-index: 1;
-
-
+  width: 100%;
+  padding: 0px 190px;
 }
 
-.teste {
+.imgfundo {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
-  object-fit: none;
+  object-fit: cover;
 }
