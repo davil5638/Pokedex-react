@@ -1,17 +1,33 @@
 import React from "react";
 import "./navbar.css";
-import imagem from "../../assets/images/logo.png";
-import imagem2 from "../../assets/images/fundo3.png";
+import imagem from "../../assets/images/logo.svg";
+import imagem2 from "../../assets/images/lupa.png";
 
 export default function Navbar() {
   return (
     <>
       <nav id="menu">
-        <img class="imgfundo" src={imagem2} />
         <div class="logo">
-          <a href="#">
-            <img src={imagem} />
-          </a>
+          <img class="imglogo" src={imagem} />
+          <span class="logo-nome">
+            {" "}
+            <h1>Poké.Search</h1>
+            {" "}
+          </span>
+        </div>
+
+        <div class="barra-search">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar Pokémon"
+              aria-label="Search"
+            />
+            <button class="botao-search" type="submit">
+              <img class="imagemlupa" src={imagem2} />
+            </button>
+          </form>
         </div>
       </nav>
     </>

@@ -19,6 +19,7 @@
   position: relative;
   height: 350px;
   cursor: pointer;
+  margin-top: 50px;
 }
 
 .galeriapokemons:hover {
