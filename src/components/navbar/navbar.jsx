@@ -21,7 +21,7 @@ export default function Navbar() {
             <input
               class="form-control"
               type="search"
-              placeholder="Buscar Pokémon"
+              placeholder="Buscar Pokémon..."
               aria-label="Search"
             />
             <button class="botao-search" type="submit">

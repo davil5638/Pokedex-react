@@ -47,7 +47,7 @@ body {
 .logo-nome h1 {
   color: white;
   margin-top: 35px;
-  font-family: "Roboto";
+  font-family: system-ui;
   font-size: 30px;
   letter-spacing: 3px;
   text-shadow: black 0.2em 0.1em 0.2em;
@@ -75,7 +75,7 @@ body {
 }
 
 .imagemlupa {
-  width:20px;
+  width: 20px;
 }
 
 /* responsividade */
