@@ -11,8 +11,7 @@ export default function Navbar() {
           <img class="imglogo" src={imagem} />
           <span class="logo-nome">
             {" "}
-            <h1>Poké.Search</h1>
-            {" "}
+            <h1>Poké.Search</h1>{" "}
           </span>
         </div>
 

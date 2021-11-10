@@ -16,7 +16,7 @@ export default function cards() {
 
             <div class="elementos">
               <span class="cor-eletric">Eletric</span>
-              <span class="cor-water">Water</span>
+              {/* <span class="cor-water">Water</span> */}
             </div>
           </div>
         </div>
