@@ -19,7 +19,7 @@ export default function Navbar() {
         <div class="barra-search">
           <form class="d-flex">
             <input
-              class="form-control me-2"
+              class="form-control"
               type="search"
               placeholder="Buscar Pokémon"
               aria-label="Search"
