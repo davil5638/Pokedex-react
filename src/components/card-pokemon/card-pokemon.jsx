@@ -6,10 +6,11 @@ import imagem2 from "../../assets/images/pokebola.png";
 export default function cards() {
   return (
     <>
-      <div class="galeriapokemons">
-        <div class="cards">
+      <div class="cards">
+        <div class="conteudocards">
           <img class="pokemon" src={imagem} />
           <img class="pokebola" src={imagem2} />
+
           <div class="texto-cards">
             <h1> Pikachu </h1>
 
