@@ -9,6 +9,15 @@
   gap: 10px;
   align-items: center;
   flex-direction: row;
+  background-color: rgb(221, 221, 221);
+  background-image: url("../../assets/images/imgfundo14.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+ 
 }
 
 /* Cards */
@@ -21,7 +30,8 @@
   position: relative;
   height: 350px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .galeriapokemons:hover {
@@ -43,14 +53,14 @@
 .pokebola {
   position: absolute;
   right: 4px;
-  top: -38px;
+  top: -33px;
   width: 40px !important;
 }
 
 .cards img {
   width: 70%;
   align-self: center;
-  margin: 40px 0;
+  margin: 35px 0;
 }
 
 .cards .pokemon:hover {
@@ -67,7 +77,9 @@
   text-align: center;
   border-top: 2px solid rgb(204, 199, 199);
   cursor: default;
-  font-family: "Roboto";
+  font-family: "Flexo-Demi",arial,sans-serif;
+  padding: 10px;
+
 }
 
 .texto-cards h1:hover {
@@ -80,7 +92,7 @@
 .elementos {
   border-radius: 3px;
   font-size: 15px;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   justify-content: space-around;
   letter-spacing: 1px;
