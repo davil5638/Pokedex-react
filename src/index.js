@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Navbar from "./components/navbar/navbar";
 import Card from "./components/card-pokemon/card-pokemon";
+import './global.css'
 
 ReactDOM.render(
   <div>
