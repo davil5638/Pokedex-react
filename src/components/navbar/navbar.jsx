@@ -1,14 +1,15 @@
 import React from "react";
 import "./navbar.css";
-import imagem from "../../assets/images/logo.svg";
-import imagem2 from "../../assets/images/lupa.png";
+import logo from "../../assets/images/logo.svg";
+import lupa from "../../assets/images/lupa.png";
+import addicon from "../../assets/images/add-icon2.png";
 
 export default function Navbar() {
   return (
     <>
       <nav id="menu">
         <div class="logo">
-          <img class="imglogo" src={imagem} />
+          <img class="imglogo" src={logo} />
           <span class="logo-nome">
             {" "}
             <h1>Poké.Search</h1>{" "}
@@ -24,9 +25,16 @@ export default function Navbar() {
               aria-label="Search"
             />
             <button class="botao-search" type="submit">
-              <img class="imagemlupa" src={imagem2} />
+              <img class="imagemlupa" src={lupa} />
             </button>
           </form>
+        </div>
+
+        <div id="addnewpokemon">
+          <button class="botaonewpokemon">
+            <img class="addicon" src={addicon} />
+            <span class="textnewpokemon">New Pokémon</span>
+          </button>
         </div>
       </nav>
     </>

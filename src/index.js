@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Navbar from "./components/navbar/navbar";
 import Card from "./components/card-pokemon/card-pokemon";
-import './global.css'
+import "./global.css";
 
 ReactDOM.render(
   <div>
@@ -24,10 +24,11 @@ ReactDOM.render(
       <Card name="Card14" />
       <Card name="Card15" />
       <Card name="Card16" />
-      <Card name="Card17" />
-      <Card name="Card18" />
-      <Card name="Card19" />
-      <Card name="Card20" />
+      
+      <div class="cardvazio"></div>
+      <div class="cardvazio"></div>
+      <div class="cardvazio"></div>
+      <div class="cardvazio"></div>
       
     </div>
   </div>,

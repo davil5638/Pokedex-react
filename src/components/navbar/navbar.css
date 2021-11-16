@@ -1,5 +1,3 @@
-
-
 /* Header */
 
 #menu {
@@ -11,6 +9,7 @@
   border-bottom: 5px solid #00b4cc;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
 }
 
 /* Logotipo */
@@ -34,8 +33,7 @@
 
 .barra-search {
   width: 25%;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: 25px;
 }
 
 .form-control {
@@ -55,19 +53,65 @@
   width: 20px;
 }
 
+/* Novo Pokémon */
+
+.addicon {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+}
+
+.botaonewpokemon {
+  background-color: #00b4cc;
+  border: none;
+  padding: 4.63px;
+  border-radius: 5px;
+  margin-top: 25px;
+  color: white;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.botaonewpokemon:hover {
+  background-color: #0ac1da;
+  box-shadow: 2px 5px 10px 5px rgba(27, 195, 224, 0.16);
+}
+
+.textnewpokemon {
+  font-family: "Roboto";
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
 /* Responsividade */
 
 @media screen and (max-width: 850px) {
   #menu {
     display: block;
   }
+
   .barra-search {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .d-flex {
+    width: 80%;
+  }
+
+  #addnewpokemon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .botaonewpokemon {
     width: 80%;
   }
 }

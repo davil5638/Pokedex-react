@@ -1,22 +1,27 @@
 /* Container */
 
 #container {
+  margin: auto;
+  width: 80%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: auto;
-  width: 80%;
-  gap: 10px;
   align-items: center;
-  flex-direction: row;
+  gap: 10px;
+
   background-color: rgb(221, 221, 221);
   background-image: url("../../assets/images/imgfundocontainer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 5px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  
+}
+
+#container .cardvazio {
+  width: 250px;
+  height: 0;
 }
 
 /* Cards */
@@ -76,9 +81,9 @@
   text-align: center;
   border-top: 2px solid rgb(204, 199, 199);
   cursor: default;
-  font-family: "Flexo-Demi",arial,sans-serif;
+  font-family: "Flexo-Demi", arial, sans-serif;
   padding: 10px;
-
+  cursor: pointer;
 }
 
 .texto-cards h1:hover {
@@ -99,6 +104,7 @@
   color: rgb(0, 0, 0);
   font-family: "Roboto";
   font-weight: 700;
+  cursor: pointer;
 }
 
 .cor-eletric {
@@ -117,11 +123,8 @@
 
 /* Responsividade */
 
-@media (max-width: 316px)
-{
-  #container
-   {
+@media (max-width: 316px) {
+  #container {
     width: 100%;
-   }
-
-   }
+  }
+}
