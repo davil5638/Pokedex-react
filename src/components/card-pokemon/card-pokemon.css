@@ -70,13 +70,12 @@
 .cards .pokemon:hover {
   opacity: 0.8;
   transform: scale(1.2);
-  transition: 0.5s;
+  transition: 500ms ease-in-out;
 }
 
 /* Texto do card */
 
 .texto-cards h1 {
-  transition: 0.3s ease-in-out;
   font-size: 30px;
   text-align: center;
   border-top: 2px solid rgb(204, 199, 199);
@@ -87,8 +86,7 @@
 }
 
 .texto-cards h1:hover {
-  color: rgb(194, 201, 94);
-  transition: 0.3s ease-in-out;
+  color: #28475c;
 }
 
 /* Elementos */
