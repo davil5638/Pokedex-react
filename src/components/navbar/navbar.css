@@ -42,24 +42,28 @@
   border-radius: 5px 0px 0px 5px;
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .botao-search {
   width: 17%;
   border: 3px solid #00b4cc;
   background-color: #00b4cc;
   border-radius: 0px 5px 5px 0px;
+  height: 39.7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagemlupa {
   width: 20px;
 }
 
-/* Novo Pokémon */
-
-.addicon {
-  width: 30px;
-  height: 30px;
-  margin-right: 7px;
-}
+/* Botão Novo Pokémon */
 
 .botaonewpokemon {
   background-color: #00b4cc;
@@ -81,14 +85,21 @@
 
 .textnewpokemon {
   font-family: "Roboto";
-  color: #fff;
-  font-weight: 600;
+  color: #222b31;
+  font-weight:900;
+  font-size: medium;
   letter-spacing: 2px;
+}
+
+.addicon {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
 }
 
 /* Responsividade */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 715px) {
   #menu {
     display: block;
   }

@@ -5,6 +5,10 @@ import lupa from "../../assets/images/lupa.png";
 import addicon from "../../assets/images/add-icon2.png";
 
 export default function Navbar() {
+  function OpenModal() {
+    document.getElementById("addpokemon").classList.add("ativar");
+  }
+ 
   return (
     <>
       <nav id="menu">
@@ -31,7 +35,7 @@ export default function Navbar() {
         </div>
 
         <div id="addnewpokemon">
-          <button class="botaonewpokemon">
+          <button class="botaonewpokemon" onClick={OpenModal}>
             <img class="addicon" src={addicon} />
             <span class="textnewpokemon">New Pokémon</span>
           </button>
