@@ -6,17 +6,17 @@ import pokemons from "../../assets/images/pikachu.png";
 export default function cards(propies) {
   return (
     <>
-      <div class="cards">
-        <div class="conteudocards">
-          <img class="pokemon" src={pokemons} />
-          <img class="pokebola" src={propies.imagem} />
+      <div className="cards">
+        <div className="conteudocards">
+          <img className="pokemon" src={pokemons} />
+          <img className="pokebola" src={propies.imagem} />
 
-          <div class="texto-cards">
+          <div className="texto-cards">
             <h1> {propies.name} </h1>
 
-            <div class="elementos">
-              <span class="cor-eletric">{propies.elementoEletric}</span>
-              <span class="cor-water">{propies.elementoWater}</span>
+            <div className="elementos">
+              <span className="cor-eletric">{propies.elementoEletric}</span>
+              <span className="cor-water">{propies.elementoWater}</span>
             </div>
           </div>
         </div>

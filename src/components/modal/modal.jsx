@@ -1,62 +1,50 @@
 import React from "react";
 import "./modal.css";
 import Card from "../card-pokemon/card-pokemon";
+import { useState } from "react";
 
-export default function modal() {
+export default function modal(props) {
   function cancelar() {
     document.getElementById("addpokemon").classList.remove("ativar");
   }
 
-  // function adicionarPokemon() {
-  //   const container = document.getElementById("container");
-  //   const pokemon = {
-  //     name: "Bulbassauro",
-  //     elemento: "Planta",
-  //     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-  //   };
-  //   const cardpokemon = (
-  //     <Card
-  //       name={pokemon.name}
-  //       elemento={pokemon.elemento}
-  //       imagem={pokemon.imagem}
-  //     />
-  //   );
-    
-  //   container.insertAdjacentHTML("beforeend", cardpokemon);
-  //   cardpokemon;
-  // }
-
   return (
     <>
-      <div id="addpokemon" class="fundo-modal">
-        <div class="conteudo-modal">
+      <div id="addpokemon" className="fundo-modal">
+        <div className="conteudo-modal">
           <div id="form">
-            <h4 class="title">Adicione o Pokémon</h4>
+            <h4 className="title">Adicione o Pokémon</h4>
 
-            <form action="" class="form">
-              <input type="text" placeholder="Nome do Pokémon" />
+            <form action="" className="form">
+              <input
+                id="nome"
+                type="text"
+                className="nomedopokemon"
+                placeholder="Nome do Pokémon"
+              />
 
               <input
+                id="elemento"
                 type="text"
                 placeholder="Elementos Ex: Water Eletric Fire"
               />
 
-              <div class="imagempokemon">
+              <div className="imagempokemon">
                 <label> Escolha a imagem do pokémon </label>
-                <input type="file" class="file" />
+                <input type="file" className="file" id="imagem" />
               </div>
 
               <div id="botoesform">
                 <input
                   type="button"
                   value="Enviar"
-                  class="botaoenviar"
-                  // onClick={adicionarPokemon}
+                  className="botaoenviar"
+                  onClick={props.adicionarPokemon}
                 />
                 <input
                   type="button"
                   value="Cancelar"
-                  class="botaocancelar"
+                  className="botaocancelar"
                   onClick={cancelar}
                 />
               </div>

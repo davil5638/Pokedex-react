@@ -12,32 +12,32 @@ export default function Navbar() {
   return (
     <>
       <nav id="menu">
-        <div class="logo">
-          <img class="imglogo" src={logo} />
-          <span class="logo-nome">
+        <div className="logo">
+          <img className="imglogo" src={logo} />
+          <span className="logo-nome">
             {" "}
             <h1>Poké.Search</h1>{" "}
           </span>
         </div>
 
-        <div class="barra-search">
-          <form class="d-flex">
+        <div className="barra-search">
+          <form className="d-flex">
             <input
-              class="form-control"
+              className="form-control"
               type="search"
               placeholder="Buscar Pokémon..."
               aria-label="Search"
             />
-            <button class="botao-search" type="submit">
-              <img class="imagemlupa" src={lupa} />
+            <button className="botao-search" type="submit">
+              <img className="imagemlupa" src={lupa} />
             </button>
           </form>
         </div>
 
         <div id="addnewpokemon">
-          <button class="botaonewpokemon" onClick={OpenModal}>
-            <img class="addicon" src={addicon} />
-            <span class="textnewpokemon">New Pokémon</span>
+          <button className="botaonewpokemon" onClick={OpenModal}>
+            <img className="addicon" src={addicon} />
+            <span className="textnewpokemon">New Pokémon</span>
           </button>
         </div>
       </nav>
