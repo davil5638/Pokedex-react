@@ -4,9 +4,7 @@ import Card from "../card-pokemon/card-pokemon";
 import { useState } from "react";
 
 export default function modal(props) {
-  function cancelar() {
-    document.getElementById("addpokemon").classList.remove("ativar");
-  }
+ 
 
   return (
     <>
@@ -45,7 +43,7 @@ export default function modal(props) {
                   type="button"
                   value="Cancelar"
                   className="botaocancelar"
-                  onClick={cancelar}
+                 
                 />
               </div>
             </form>

@@ -3,12 +3,13 @@ import "./navbar.css";
 import logo from "../../assets/images/logo.svg";
 import lupa from "../../assets/images/lupa.png";
 import addicon from "../../assets/images/add-icon2.png";
+import { useState } from "react";
 
-export default function Navbar() {
-  function OpenModal() {
-    document.getElementById("addpokemon").classList.add("ativar");
-  }
- 
+const Navbar = () => {
+  const [pokemons, setPokemon] = useState(["Pikachu", "Pikachu"]);
+
+  const [openmodal, setOpenModal] = useState(false);
+
   return (
     <>
       <nav id="menu">
@@ -35,7 +36,10 @@ export default function Navbar() {
         </div>
 
         <div id="addnewpokemon">
-          <button className="botaonewpokemon" onClick={OpenModal}>
+          <button
+            className="botaonewpokemon"
+            onClick={() => setOpenModal(true)}
+          >
             <img className="addicon" src={addicon} />
             <span className="textnewpokemon">New Pokémon</span>
           </button>
@@ -44,4 +48,5 @@ export default function Navbar() {
     </>
   );
 }
-[];
+
+export default Navbar;

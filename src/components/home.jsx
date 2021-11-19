@@ -29,8 +29,6 @@ export default () => {
         'elemento': elemento.value,
         'imagem': imagem.value, 
       }
-      setlistapokemon(listapokemon.push(pokemon))
-      console.log (listapokemon);
     }
   }
   
@@ -51,5 +49,6 @@ export default () => {
       </div>
       <Modal adicionarPokemon={adicionarPokemon}></Modal>
     </div>
+    
   );
 };
