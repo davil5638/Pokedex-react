@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./navbar/navbar";
 import Card from "./card-pokemon/card-pokemon";
 import Modal from "./modal/modal";
-import pokebola from "../assets/images/pokebola.png";
+
 import Buttonmodal from "./buttonmodal/buttonmodal";
 
 export default (props) => {
@@ -34,32 +34,26 @@ export default (props) => {
         elemento: document.getElementById("elemento").value,
         imagem: document.getElementById("imagem").value,
       };
-      console.log(listapokemons)
+      console.log(listapokemons);
 
-      addPokemon([...listapokemons,pokemon]);
+      addPokemon([...listapokemons, pokemon]);
       setOpenModal(false);
     }
   }
-
+    
   return (
     <div>
       <Navbar>
         <Buttonmodal abrirModal={abrirModal}> </Buttonmodal>
       </Navbar>
       <div id="container">
-        
-        {listapokemons.map((pokemon) => {
-          <Card
+        {listapokemons.map((pokemon, i) => (
+          <Card key={i}
             name={pokemon.nome}
-            elementoEletric={pokemon.elemento}
-            elementoWater={pokemon.elemento}
+            elemento={pokemon.elemento}            
             imagem={pokemon.imagem}
-          ></Card>;
-        })}
-        <div className="cardvazio"></div>
-        <div className="cardvazio"></div>
-        <div className="cardvazio"></div>
-        <div className="cardvazio"></div>
+          ></Card>
+        ))}
       </div>
       <Modal open={openmodal} enviarPokemon={enviarPokemon}></Modal>
     </div>
