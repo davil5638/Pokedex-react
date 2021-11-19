@@ -1,10 +1,11 @@
 import React from "react";
 import "./modal.css";
-import Card from "../card-pokemon/card-pokemon";
-import { useState } from "react";
 
-export default function modal(props) {
- 
+
+const modal = (props) => {
+  if (!props.open) {
+    return null;
+  }
 
   return (
     <>
@@ -19,6 +20,7 @@ export default function modal(props) {
                 type="text"
                 className="nomedopokemon"
                 placeholder="Nome do Pokémon"
+
               />
 
               <input
@@ -33,17 +35,14 @@ export default function modal(props) {
               </div>
 
               <div id="botoesform">
-                <input
-                  type="button"
-                  value="Enviar"
-                  className="botaoenviar"
-                  onClick={props.adicionarPokemon}
-                />
+                <input type="button" value="Enviar" className="botaoenviar"
+                onClick={props.enviarPokemon}
+                 />
                 <input
                   type="button"
                   value="Cancelar"
                   className="botaocancelar"
-                 
+                  
                 />
               </div>
             </form>
@@ -52,4 +51,6 @@ export default function modal(props) {
       </div>
     </>
   );
-}
+};
+
+export default modal;

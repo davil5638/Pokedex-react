@@ -4,12 +4,9 @@ import logo from "../../assets/images/logo.svg";
 import lupa from "../../assets/images/lupa.png";
 import addicon from "../../assets/images/add-icon2.png";
 import { useState } from "react";
+import Modal from "../modal/modal";
 
-const Navbar = () => {
-  const [pokemons, setPokemon] = useState(["Pikachu", "Pikachu"]);
-
-  const [openmodal, setOpenModal] = useState(false);
-
+const Navbar = (props) => {
   return (
     <>
       <nav id="menu">
@@ -34,19 +31,10 @@ const Navbar = () => {
             </button>
           </form>
         </div>
-
-        <div id="addnewpokemon">
-          <button
-            className="botaonewpokemon"
-            onClick={() => setOpenModal(true)}
-          >
-            <img className="addicon" src={addicon} />
-            <span className="textnewpokemon">New Pokémon</span>
-          </button>
-        </div>
+        {props.children}
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

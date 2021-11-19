@@ -3,12 +3,12 @@ import Navbar from "./navbar/navbar";
 import Card from "./card-pokemon/card-pokemon";
 import Modal from "./modal/modal";
 import pokebola from "../assets/images/pokebola.png";
+import Buttonmodal from "./buttonmodal/buttonmodal";
 
+export default (props) => {
+  const [listapokemons, addPokemon] = useState([]);
+  const [openmodal, setOpenModal] = useState(false);
 
-export default () => {
-
-  const [listapokemon, setlistapokemon] = useState([])
-  
   function isFormValid() {
     const nome = document.getElementById("nome");
     const elemento = document.getElementById("elemento");
@@ -20,35 +20,48 @@ export default () => {
       return false;
     }
   }
-  function adicionarPokemon() {
+
+  function abrirModal() {
+    setOpenModal(true);
+  }
+
+  function enviarPokemon() {
     if (!isFormValid()) {
       alert("Preencher os campos com valores válidos");
     } else {
       const pokemon = {
-        'nome': nome.value,
-        'elemento': elemento.value,
-        'imagem': imagem.value, 
-      }
+        nome: document.getElementById("nome").value,
+        elemento: document.getElementById("elemento").value,
+        imagem: document.getElementById("imagem").value,
+      };
+      console.log(listapokemons)
+
+      addPokemon([...listapokemons,pokemon]);
+      setOpenModal(false);
     }
   }
-  
+
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar>
+        <Buttonmodal abrirModal={abrirModal}> </Buttonmodal>
+      </Navbar>
       <div id="container">
-        <Card
-          name="Pikachu"
-          elementoEletric="Eletric"
-          elementoWater="Water"
-          imagem={pokebola}
-        ></Card>
+        
+        {listapokemons.map((pokemon) => {
+          <Card
+            name={pokemon.nome}
+            elementoEletric={pokemon.elemento}
+            elementoWater={pokemon.elemento}
+            imagem={pokemon.imagem}
+          ></Card>;
+        })}
         <div className="cardvazio"></div>
         <div className="cardvazio"></div>
         <div className="cardvazio"></div>
         <div className="cardvazio"></div>
       </div>
-      <Modal adicionarPokemon={adicionarPokemon}></Modal>
+      <Modal open={openmodal} enviarPokemon={enviarPokemon}></Modal>
     </div>
-    
   );
 };

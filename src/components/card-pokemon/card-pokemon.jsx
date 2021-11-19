@@ -2,7 +2,6 @@ import React from "react";
 import "./card-pokemon.css";
 import pokemons from "../../assets/images/pikachu.png";
 
-
 export default function cards(propies) {
   return (
     <>
