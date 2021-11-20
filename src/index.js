@@ -1,11 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./global.css";
-import Home from "./components/home"
+import Home from "./pages/home";
 
-ReactDOM.render(
-  <div>
-    <Home></Home>
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<Home />, document.getElementById("root"));
