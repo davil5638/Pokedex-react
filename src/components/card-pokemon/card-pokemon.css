@@ -1,0 +1,128 @@
+/* Container */
+
+#container {
+  margin: auto;
+  width: 80%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+
+  background-color: rgb(221, 221, 221);
+  background-image: url("../../assets/images/imgfundocontainer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container .cardvazio {
+  width: 250px;
+  height: 0;
+}
+
+/* Cards */
+
+.cards {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  height: 350px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.cards:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+
+.conteudocards {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  flex-direction: column;
+}
+
+/* Imagens */
+
+.pokebola {
+  position: absolute;
+  right: 4px;
+  top: -33px;
+  width: 40px !important;
+}
+
+.cards img {
+  width: 70%;
+  align-self: center;
+  margin: 35px 0;
+}
+
+.cards .pokemon:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+  transition: 500ms ease-in-out;
+}
+
+/* Texto do card */
+
+.texto-cards h1 {
+  font-size: 30px;
+  text-align: center;
+  border-top: 2px solid rgb(204, 199, 199);
+  cursor: default;
+  font-family: "Flexo-Demi", arial, sans-serif;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.texto-cards h1:hover {
+  color: #28475c;
+}
+
+/* Elementos */
+
+.elementos {
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  letter-spacing: 1px;
+  cursor: default;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto";
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cor-eletric {
+  background-color: #eed535;
+  width: 40%;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.cor-water {
+  background-color: #4592c4;
+  width: 40%;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Responsividade */
+
+@media (max-width: 316px) {
+  #container {
+    width: 100%;
+  }
+}
