@@ -57,6 +57,10 @@ const Home = () => {
             imagem={pokemon.imagem}
           ></Card>
         ))}
+        <div className="cardvazio"></div>
+        <div className="cardvazio"></div>
+        <div className="cardvazio"></div>
+        <div className="cardvazio"></div>
       </div>
       {openModal ? (
         <Modal close={fecharModal} enviarPokemon={enviarPokemon} />

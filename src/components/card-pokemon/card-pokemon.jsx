@@ -15,8 +15,10 @@ export default function cards(propies) {
 
             <div className="elementos">
               <span className="cor-eletric">{propies.elemento}</span>
-              
+
+            
             </div>
+          
           </div>
         </div>
       </div>
