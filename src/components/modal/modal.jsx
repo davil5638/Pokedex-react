@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./modal.css";
 
 const Modal = (props) => {
-
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState("");
 
   return (
     <>
@@ -11,7 +10,7 @@ const Modal = (props) => {
         <div className="conteudo-modal">
           <div id="form">
             <h4 className="title">Adicione o Pokémon</h4>
-            <form onSubmit={props.enviarPokemon}  className="form">
+            <form onSubmit={props.enviarPokemon} className="form">
               <input
                 id="nome"
                 type="text"
@@ -28,10 +27,29 @@ const Modal = (props) => {
                 <label htmlFor="imagem" className="custom-input">
                   <i className="fas fa-file-upload"></i> Imagem Pokémon
                 </label>
-                <input type="file" id="imagem" onChange={e => setImage(e.target.files[0])}></input>
-                {image ? <img className="previewimg" src={URL.createObjectURL(image)} alt="imagem" width="100" height="100" />
-                :<img className="previewimg" src="./icone_usuario.png" alt="Imagem" width="100" height="100"/> }
-
+                <input
+                  type="file"
+                  id="imagem"
+                  onChange={(e) => setImage(e.target.files[0])}
+                ></input>
+                {image ? (
+                  <img
+                    id="imagempokemon"
+                    className="previewimg"
+                    src={URL.createObjectURL(image)}
+                    alt="imagem"
+                    width="100"
+                    height="100"
+                  />
+                ) : (
+                  <img
+                    className="previewimg"
+                    src="./icone_usuario.png"
+                    alt="Imagem"
+                    width="100"
+                    height="100"
+                  />
+                )}
               </div>
 
               <div id="botoesform">

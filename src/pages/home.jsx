@@ -35,7 +35,7 @@ const Home = () => {
       const pokemon = {
         nome: inputData.nome.value,
         elemento: inputData.elemento.value,
-        imagem: inputData.imagem.value,
+        imagem: inputData.imagempokemon.src,
       };
 
       addPokemon([...listaPokemons, pokemon]);
