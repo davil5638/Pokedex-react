@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "../components/navbar/navbar";
 import Card from "../components/card-pokemon/card-pokemon";
 import Modal from "../components/modal/modal";
-
 import Buttonmodal from "../components/buttonmodal/buttonmodal";
 
 const Home = () => {
@@ -36,11 +35,20 @@ const Home = () => {
         nome: inputData.nome.value,
         elemento: inputData.elemento.value,
         imagem: inputData.imagempokemon.src,
+        id: listaPokemons.length,
       };
 
       addPokemon([...listaPokemons, pokemon]);
       setOpenModal(false);
     }
+  };
+
+  const removerPokemon = (event) => {
+    const idPokemon = +event.target.closest(".cards").id;
+    const listupdate = listaPokemons.filter(
+      (pokemon) => pokemon.id != idPokemon
+    );
+    addPokemon(listupdate);
   };
 
   return (
@@ -52,9 +60,11 @@ const Home = () => {
         {listaPokemons.map((pokemon, i) => (
           <Card
             key={i}
+            idpokemon={pokemon.id}
             name={pokemon.nome}
             elemento={pokemon.elemento}
             imagem={pokemon.imagem}
+            removerPokemon={removerPokemon}
           ></Card>
         ))}
         <div className="cardvazio"></div>

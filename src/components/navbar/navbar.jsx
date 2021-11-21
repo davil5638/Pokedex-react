@@ -2,9 +2,6 @@ import React from "react";
 import "./navbar.css";
 import logo from "../../assets/images/logo.svg";
 import lupa from "../../assets/images/lupa.png";
-import addicon from "../../assets/images/add-icon2.png";
-import { useState } from "react";
-import Modal from "../modal/modal";
 
 const Navbar = (props) => {
   return (

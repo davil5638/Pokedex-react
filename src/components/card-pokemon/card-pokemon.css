@@ -54,11 +54,20 @@
 
 /* Imagens */
 
-.pokebola {
+.iconeremover {
   position: absolute;
-  right: 4px;
-  top: -33px;
-  width: 40px !important;
+  right: 0px;
+  top: 0px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  width: 35px !important;
+}
+
+.iconeremover img {
+  position: relative;
+  margin: 0 !important;
+  width: 100%;
 }
 
 .cards img {
