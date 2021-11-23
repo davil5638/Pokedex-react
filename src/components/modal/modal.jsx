@@ -10,7 +10,7 @@ const Modal = (props) => {
         <div className="conteudo-modal">
           <div id="form">
             <h4 className="title">Adicione o Pokémon</h4>
-            <form onSubmit={props.enviarPokemon} className="form">
+            <form onSubmit={props.salvarPokemon} className="form">
               <input
                 id="nome"
                 type="text"

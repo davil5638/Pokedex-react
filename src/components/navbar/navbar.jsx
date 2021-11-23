@@ -10,8 +10,7 @@ const Navbar = (props) => {
         <div className="logo">
           <img className="imglogo" src={logo} />
           <span className="logo-nome">
-            {" "}
-            <h1>Poké.Search</h1>{" "}
+            <h1>Poké.Search</h1>
           </span>
         </div>
 
