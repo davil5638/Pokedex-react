@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./buttonmodal.css";
 import addicon from "../../assets/images/add-icon2.png";
 
@@ -9,7 +9,7 @@ const buttonmodal = (props) => {
         <button
           className="botaonewpokemon"
           onClick={() => {
-            props.abrirModal(true);
+            props.abrirModal();
           }}
         >
           <img className="addicon" src={addicon} />

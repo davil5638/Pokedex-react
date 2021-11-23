@@ -54,17 +54,30 @@
 
 /* Imagens */
 
-.pokebola {
+.iconeremover {
   position: absolute;
-  right: 4px;
-  top: -33px;
-  width: 40px !important;
+  right: 0px;
+  top: 0px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  width: 35px !important;
+}
+
+.iconeremover img {
+  position: relative;
+  margin: 0 !important;
+  width: 100%;
 }
 
 .cards img {
-  width: 70%;
+  width: 60%;
   align-self: center;
   margin: 35px 0;
+}
+
+.pokemon {
+  min-height: 150px;
 }
 
 .cards .pokemon:hover {
@@ -105,16 +118,9 @@
   cursor: pointer;
 }
 
-.cor-eletric {
-  background-color: #eed535;
-  width: 40%;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.cor-water {
-  background-color: #4592c4;
-  width: 40%;
+.cor-elemento {
+  background-color: #138291;
+  width: 80%;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }

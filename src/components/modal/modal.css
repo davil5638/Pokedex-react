@@ -48,7 +48,6 @@ input {
   border-right-width: 0;
   border-left-width: 0;
   border-color: #b5b7b8;
-
   margin: 15px 0;
   outline: none;
   transition: all 0.5s;
@@ -58,27 +57,39 @@ input {
   display: flex;
   align-items: center;
   color: #b5b7b8;
-  border-style: solid;
-  border-bottom-width: 1px;
-  border-top-width: 0;
-  border-right-width: 0;
-  border-left-width: 0;
-  border-color: #b5b7b8;
-}
-
-.file {
-  cursor: pointer;
-  width: 100%;
-  padding-bottom: 0;
-}
-
-.imagempokemon input {
   border: none;
-  width: 100%;
 }
+
+input[type="file"] {
+  display: none;
+}
+
+label.custom-input {
+  padding: 12px 10px;
+  width: 270px;
+  background-color: #222b31;
+  border: #00b4cc solid 2px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
 .imagempokemon label {
-  width: 70%;
-  opacity: 0.5;
+  font-size: medium;
+  font: bold;
+}
+
+.fas {
+  margin-right: 10px;
+}
+
+.previewimg {
+  margin-left: 60px;
 }
 
 /* Botões*/
@@ -111,22 +122,6 @@ input {
   border: none;
 }
 
-input[type="file"] {
-  display: none;
-}
-
-label.custom-input {
-  padding: 20px 10px;
-  width: 200px;
-  background-color: #333;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
 /* Responsividade */
 
 @media screen and (max-width: 950px) {
@@ -147,5 +142,8 @@ label.custom-input {
   }
   .botaocancelar {
     width: auto;
+  }
+  .previewimg {
+    margin-left: 10px;
   }
 }
