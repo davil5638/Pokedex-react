@@ -11,6 +11,12 @@ const Modal = (props) => {
           <div id="form">
             <h4 className="title">Adicione o Pokémon</h4>
             <form onSubmit={props.salvarPokemon} className="form">
+            <input
+                id="descricao"
+                type="text"
+                className="descricaodopokemon"
+                placeholder="Descrição do Pokémon"
+              />
               <input
                 id="nome"
                 type="text"

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import Navbar from "../components/navbar/navbar";
 import Card from "../components/card-pokemon/card-pokemon";
 import Modal from "../components/modal/modal";
 import Buttonmodal from "../components/buttonmodal/buttonmodal";
 import "./home.css";
+import MyContext from "../mycontext/context";
+const themeContext = React.createContext();
 
 const Home = () => {
   const [listaPokemons, addPokemon] = useState([]);
@@ -18,6 +20,7 @@ const Home = () => {
   };
 
   const salvarPokemon = (event) => {
+    event.preventDefault();
     const inputData = event.target;
 
     if (!validaForm(inputData)) {
@@ -27,6 +30,7 @@ const Home = () => {
         nome: inputData.nome.value,
         elemento: inputData.elemento.value,
         imagem: inputData.imagempokemon.src,
+
         id: Math.floor(Math.random() * 10000),
       };
 
@@ -35,39 +39,47 @@ const Home = () => {
     }
   };
 
+  const openDetail = (id) => {
+    
+
+  }
+
   const removerPokemon = (id) => {
     const listupdate = listaPokemons.filter((pokemon) => pokemon.id != id);
     addPokemon(listupdate);
   };
 
   return (
-    <div>
-      <Navbar>
-        <Buttonmodal abrirModal={() => setOpenModal(true)}> </Buttonmodal>
-      </Navbar>
-      <div id="container">
-        {listaPokemons.map((pokemon, i) => (
-          <Card
-            key={i}
-            idpokemon={pokemon.id}
-            name={pokemon.nome}
-            elemento={pokemon.elemento}
-            imagem={pokemon.imagem}
-            removerPokemon={() => removerPokemon(pokemon.id)}
-          ></Card>
-        ))}
-        <div className="cardvazio"></div>
-        <div className="cardvazio"></div>
-        <div className="cardvazio"></div>
-        <div className="cardvazio"></div>
+    <MyContext.Provider>
+      <div>
+        <Navbar>
+          <Buttonmodal abrirModal={() => setOpenModal(true)}> </Buttonmodal>
+        </Navbar>
+        <div id="container">
+          {listaPokemons.map((pokemon, i) => (
+            <Card
+              key={i}
+              idpokemon={pokemon.id}
+              name={pokemon.nome}
+              elemento={pokemon.elemento}
+              imagem={pokemon.imagem}
+              openDetails={pokemon.id}
+              removerPokemon={() => removerPokemon(pokemon.id)}
+            ></Card>
+          ))}
+          <div className="cardvazio"></div>
+          <div className="cardvazio"></div>
+          <div className="cardvazio"></div>
+          <div className="cardvazio"></div>
+        </div>
+        {showModal ? (
+          <Modal
+            close={() => setOpenModal(false)}
+            salvarPokemon={salvarPokemon}
+          />
+        ) : null}
       </div>
-      {showModal ? (
-        <Modal
-          close={() => setOpenModal(false)}
-          salvarPokemon={salvarPokemon}
-        />
-      ) : null}
-    </div>
+    </MyContext.Provider>
   );
 };
 
