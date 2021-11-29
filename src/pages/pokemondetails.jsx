@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../components/navbar/navbar";
 import "./pokemondetails.css";
 import Imagempokemon from "../assets/images/bulbasaur.png";
+import { getPokemon } from "../components/context/mycontext";
 
 const Details = (props) => {
+  const { pokemon, setPokemons } = getPokemon();
+  console.log(pokemon);
   return (
     <>
       <Navbar></Navbar>
 
       <div id="detalhesPokemon">
         <div className="imagem">
-          <div className="nomePokemon">Bulbassaur</div>
-          {" "}
-          <img src={Imagempokemon} alt="" />
+          <div className="nomePokemon">{pokemon.nome}</div>{" "}
+          <img src={pokemon.imagem} alt="" />
         </div>
         <div id="colunadetalhes">
           <div className="descricao">
             <p>
-              Há uma semente de planta em suas costas desde o dia em que o
-              Pokémon nasceu. A semente cresce lentamente.
+              {pokemon.descricao}
             </p>
           </div>
           <div className="quadrodetalhes">
@@ -58,12 +59,15 @@ const Details = (props) => {
             </div>
           </div>
           <div className="type">
-            <h4>Type -</h4>
+            <h4>Type - </h4>
           </div>
           <div className="elementodetalhes">
-            <span className="textoelemento"> Grass and Poison</span>
+            <span className="textoelemento">{pokemon.elemento}</span>
           </div>
         </div>
+      </div>
+      <div className="editar">
+        <button className="botaoeditar">Editar</button>
       </div>
     </>
   );

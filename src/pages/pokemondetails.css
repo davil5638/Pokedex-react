@@ -39,6 +39,7 @@
   font-size: 112%;
   font-family: "Roboto";
   font-weight: 700;
+  min-width: 200px;
 }
 
 .quadrodetalhes {
@@ -49,6 +50,7 @@
   margin-top: 20px;
   justify-content: space-around;
   align-items: center;
+  min-width: 700px;
 }
 
 .coluna1 {
@@ -109,7 +111,31 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-@media screen and (max-width: 715px) {
+.editar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.botaoeditar {
+  padding: 10px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #00b4cc;
+  color: white;
+  border: none;
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1597px) {
+  .quadrodetalhes {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 885px) {
   #menu {
     display: block;
   }
@@ -130,7 +156,7 @@
   }
   .quadrodetalhes {
     background-color: #00b4cc;
-    width: 100%;
+    min-width: 50px;
     height: auto;
     border-radius: 11px;
     margin-top: 20px;
@@ -153,7 +179,7 @@
     padding: 5px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1045px) {
   #menu {
     display: block;
   }
