@@ -34,7 +34,6 @@
   height: auto;
   background-color: rgba(240, 240, 240, 0.932);
   border-radius: 8px;
-  width: 100%;
   min-height: auto;
   text-align: center;
 }
@@ -132,6 +131,13 @@
   letter-spacing: 1px;
   font-weight: 600;
 }
+
+/* #editicon {
+  width: 25px !important;
+  margin-bottom: 10px;
+ 
+
+} */
 
 @media screen and (max-width: 1597px) {
   .quadrodetalhes {

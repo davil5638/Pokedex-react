@@ -5,8 +5,11 @@ import Pokemondetails from "./pages/pokemondetails.jsx";
 import { Navigate } from "react-router-dom";
 import Contextpokemon from "./components/context/mycontext";
 import PokemonContext from "./components/context/mycontext";
+import Editdetails from "./pages/editdetails";
+
 
 const App = () => {
+  
   return (
     <PokemonContext>
       <Router>

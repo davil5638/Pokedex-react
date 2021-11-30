@@ -19,7 +19,8 @@ const Home = () => {
     return (
       inputData.nome.value != "" &&
       inputData.elemento.value != "" &&
-      inputData.imagem.value != ""
+      inputData.imagem.value != "" &&
+      inputData.descricao.value != ""
     );
   };
 
@@ -31,6 +32,7 @@ const Home = () => {
       alert("Preencher todos os campos");
     } else {
       const pokemon = {
+        
         nome: inputData.nome.value,
         elemento: inputData.elemento.value,
         imagem: inputData.imagempokemon.src,
