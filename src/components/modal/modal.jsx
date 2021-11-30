@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./modal.css";
 
 const Modal = (props) => {
   const [image, setImage] = useState("");
+
+  useEffect(() => {
+    document.getElementById("descricao").value = props.pokemon?.descricao || "";
+  }, [props.pokemon]);
 
   return (
     <>
       <div id="addpokemon" className="fundo-modal">
         <div className="conteudo-modal">
           <div id="form">
-            <h4 className="title">Adicione o Pokémon</h4>
+            <h4 className="title"> {props.title} </h4>
             <form onSubmit={props.salvarPokemon} className="form">
+              <input
+                id="descricao"
+                type="text"
+                className="descricaodopokemon"
+                placeholder="Descrição do Pokémon"
+              />
               <input
                 id="nome"
                 type="text"
@@ -28,6 +38,7 @@ const Modal = (props) => {
                   <i className="fas fa-file-upload"></i> Imagem Pokémon
                 </label>
                 <input
+                
                   type="file"
                   id="imagem"
                   onChange={(e) => setImage(e.target.files[0])}

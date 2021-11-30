@@ -1,0 +1,234 @@
+#detalhesPokemon {
+  margin: auto;
+  width: 60%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(221, 221, 221);
+  background-image: url("../assets/images/imgfundocontainer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.modal {
+
+  z-index: 3;
+}
+.nomePokemon {
+  font-family: "Flexo-Medium", arial, sans-serif;
+  color: #fff;
+  font-size: 225%;
+  width: 100%;
+  text-align: center;
+  background-color: #00b4cc;
+}
+
+#detalhesPokemon img {
+  width: 100%;
+  height: auto;
+  background-color: rgba(240, 240, 240, 0.932);
+  border-radius: 8px;
+  min-height: auto;
+  text-align: center;
+}
+.descricao {
+  color: #212121;
+  font-size: 112%;
+  font-family: "Roboto";
+  font-weight: 700;
+  min-width: 200px;
+}
+
+.quadrodetalhes {
+  background-color: #00b4cc;
+  width: 90%;
+  border-radius: 11px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 700px;
+}
+
+.coluna1 {
+  display: flex;
+  flex-direction: column;
+}
+.coluna2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.quadrodetalhes span {
+  color: black;
+  font-family: "Flexo-Medium", arial, sans-serif;
+  font-size: 110%;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex start;
+  align-items: center;
+}
+
+.quadrodetalhes p {
+  font-family: "Flexo-Medium", arial, sans-serif;
+  clear: both;
+  color: #fff;
+  font-size: 110%;
+  text-transform: none;
+  letter-spacing: 1px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.type h4 {
+  font-size: 20px;
+  padding: 20px 20px 10px 0px;
+  font-weight: 700;
+  font-family: "Roboto";
+  position: absolute;
+  margin-top: 20px;
+}
+
+.elementodetalhes {
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+.textoelemento {
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 10px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-weight: 700;
+  background-color: #138291;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.editar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.botaoeditar {
+  padding: 10px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #00b4cc;
+  color: white;
+  border: none;
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* #editicon {
+  width: 25px !important;
+  margin-bottom: 10px;
+ 
+
+} */
+
+@media screen and (max-width: 1597px) {
+  .quadrodetalhes {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  #menu {
+    display: block;
+  }
+  .barra-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d-flex {
+    width: 80%;
+  }
+  #detalhesPokemon {
+    display: block;
+    padding: 3px;
+    width: 80%;
+  }
+  .quadrodetalhes {
+    background-color: #00b4cc;
+    min-width: 50px;
+    height: auto;
+    border-radius: 11px;
+    margin-top: 20px;
+  }
+  .coluna1 {
+    margin-left: -10px;
+  }
+  .coluna2 {
+    margin-left: 0px;
+  }
+  .type h4 {
+    margin-top: 0px;
+  }
+
+  .elementodetalhes {
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+  .textoelemento {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 1045px) {
+  #menu {
+    display: block;
+  }
+  .barra-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d-flex {
+    width: 80%;
+  }
+  #detalhesPokemon {
+    display: block;
+    padding: 3px;
+    width: 80%;
+  }
+  .quadrodetalhes {
+    background-color: #00b4cc;
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+    margin-top: 20px;
+  }
+  .coluna1 {
+    margin-left: -10px;
+  }
+  .coluna2 {
+    margin-left: 0px;
+  }
+  .type h4 {
+    margin-top: 0px;
+  }
+  .elementodetalhes {
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+  .textoelemento {
+    padding: 5px;
+  }
+}
