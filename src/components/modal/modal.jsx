@@ -34,6 +34,7 @@ const Modal = (props) => {
                   <i className="fas fa-file-upload"></i> Imagem Pokémon
                 </label>
                 <input
+                
                   type="file"
                   id="imagem"
                   onChange={(e) => setImage(e.target.files[0])}

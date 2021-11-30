@@ -5,7 +5,6 @@ import Modal from "../components/modal/modal";
 import Buttonmodal from "../components/buttonmodal/buttonmodal";
 import "./home.css";
 
-
 const Home = () => {
   const [listaPokemons, addPokemon] = useState([]);
   const [showModal, setOpenModal] = useState(false);
@@ -14,7 +13,8 @@ const Home = () => {
     return (
       inputData.nome.value != "" &&
       inputData.elemento.value != "" &&
-      inputData.imagem.value != ""
+      inputData.imagem.value != "" &&
+      inputData.descricao.value != ""
     );
   };
 
@@ -26,6 +26,7 @@ const Home = () => {
       alert("Preencher todos os campos");
     } else {
       const pokemon = {
+        
         nome: inputData.nome.value,
         elemento: inputData.elemento.value,
         imagem: inputData.imagempokemon.src,
@@ -36,11 +37,6 @@ const Home = () => {
       addPokemon([...listaPokemons, pokemon]);
       setOpenModal(false);
     }
-  };
-
-  const removerPokemon = (id) => {
-    const listupdate = listaPokemons.filter((pokemon) => pokemon.id != id);
-    addPokemon(listupdate);
   };
 
   return (
@@ -57,7 +53,6 @@ const Home = () => {
             name={pokemon.nome}
             elemento={pokemon.elemento}
             imagem={pokemon.imagem}
-            
             removerPokemon={() => removerPokemon(pokemon.id)}
           ></Card>
         ))}

@@ -3,13 +3,11 @@ import "./card-pokemon.css";
 // import pokebola from "../../assets/images/pokebola.png";
 import iconeremover from "../../assets/images/icone-remover.png";
 import { Link } from "react-router-dom";
-import {getPokemon} from "../context/mycontext"
-
-
+import { getPokemon } from "../context/mycontext";
 
 const Cards = (props) => {
-const {pokemon, setPokemons} = getPokemon()
-const path = '/pokemon/' + props.idpokemon
+  const { pokemon, setPokemons } = getPokemon();
+  const path = "/pokemon/" + props.idpokemon;
 
   return (
     <>
