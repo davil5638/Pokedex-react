@@ -1,15 +1,20 @@
-import React, { createContext, useState, useContext, useReducer } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar/navbar";
 import Card from "../components/card-pokemon/card-pokemon";
 import Modal from "../components/modal/modal";
 import Buttonmodal from "../components/buttonmodal/buttonmodal";
 import "./home.css";
 
-
 const Home = () => {
-  const [listaPokemons, addPokemon] = useState([]);
+  const [listaPokemons, addPokemon] = useState(
+    JSON.parse(sessionStorage.getItem("listPokemon")) || []
+  );
   const [showModal, setOpenModal] = useState(false);
-  
+
+  useEffect(() => {
+    sessionStorage.setItem("listPokemon", JSON.stringify(listaPokemons));
+  }, [listaPokemons]);
+
   const validaForm = (inputData) => {
     return (
       inputData.nome.value != "" &&
@@ -39,7 +44,7 @@ const Home = () => {
   };
 
   const removerPokemon = (id) => {
-    const listupdate = listaPokemons.filter((pokemon) => pokemon.id != id);
+    const listupdate = listaPokemons.filter((pokemon) => pokemon.id !== id);
     addPokemon(listupdate);
   };
 
@@ -57,7 +62,6 @@ const Home = () => {
             name={pokemon.nome}
             elemento={pokemon.elemento}
             imagem={pokemon.imagem}
-            
             removerPokemon={() => removerPokemon(pokemon.id)}
           ></Card>
         ))}
@@ -69,6 +73,7 @@ const Home = () => {
       </div>
       {showModal ? (
         <Modal
+          title="Adicionar Pokémon"
           close={() => setOpenModal(false)}
           salvarPokemon={salvarPokemon}
         />

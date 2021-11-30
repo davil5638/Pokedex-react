@@ -1,19 +1,23 @@
 import React, { createContext, useState, useContext } from "react";
 import "./card-pokemon.css";
-// import pokebola from "../../assets/images/pokebola.png";
 import iconeremover from "../../assets/images/icone-remover.png";
 import { Link } from "react-router-dom";
-import {getPokemon} from "../context/mycontext"
-
-
+import { getPokemon } from "../context/mycontext";
 
 const Cards = (props) => {
-const {pokemon, setPokemons} = getPokemon()
-const path = '/pokemon/' + props.idpokemon
+  const { setPokemons } = getPokemon();
+  const path = "/pokemon/" + props.idpokemon;
 
   return (
     <>
       <div className="cards" id={props.idpokemon}>
+        <button
+          id="removerpokemon"
+          className="iconeremover"
+          onClick={props.removerPokemon}
+        >
+          <img src={iconeremover} />
+        </button>
         <Link to={path} onClick={() => setPokemons(props.pokemon)}>
           <div className="conteudocards">
             <img
@@ -23,13 +27,7 @@ const path = '/pokemon/' + props.idpokemon
               width="100"
               height="100"
             />
-            <button
-              id="removerpokemon"
-              className="iconeremover"
-              onClick={props.removerPokemon}
-            >
-              <img src={iconeremover} />
-            </button>
+
             <div className="texto-cards">
               <h1> {props.name} </h1>
 

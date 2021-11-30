@@ -1,16 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/navbar/navbar";
 import "./pokemondetails.css";
-import Imagempokemon from "../assets/images/bulbasaur.png";
 import { getPokemon } from "../components/context/mycontext";
+import Modal from "../components/modal/modal";
 
 const Details = (props) => {
-  const { pokemon, setPokemons } = getPokemon();
-  console.log(pokemon);
+  const { pokemon } = getPokemon();
+  const [showModal, setOpenModal] = useState(false);
+
   return (
     <>
       <Navbar></Navbar>
-
+      {showModal ? (
+        <Modal
+          pokemon={pokemon}
+          className="modal"
+          title="Editar Pokémon"
+          close={() => setOpenModal(false)}
+        />
+      ) : null}
       <div id="detalhesPokemon">
         <div className="imagem">
           <div className="nomePokemon">{pokemon.nome}</div>{" "}
@@ -18,9 +26,7 @@ const Details = (props) => {
         </div>
         <div id="colunadetalhes">
           <div className="descricao">
-            <p>
-              {pokemon.descricao}
-            </p>
+            <p>{pokemon.descricao}</p>
           </div>
           <div className="quadrodetalhes">
             <div className="coluna1">
@@ -67,7 +73,9 @@ const Details = (props) => {
         </div>
       </div>
       <div className="editar">
-        <button className="botaoeditar">Editar</button>
+        <button className="botaoeditar" onClick={() => setOpenModal(true)}>
+          Editar
+        </button>
       </div>
     </>
   );

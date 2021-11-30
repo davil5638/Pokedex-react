@@ -13,8 +13,8 @@ const PokemonContext = (props) => {
 }
 
 export function getPokemon() {
-  const context = useContext(Context)
-  const {pokemon, setPokemons} = context 
+  const savedContext = useContext(Context)
+  const {pokemon, setPokemons} = savedContext 
   return {pokemon, setPokemons}
 }
 
