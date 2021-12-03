@@ -21,7 +21,7 @@ const Details = (props) => {
       ) : null}
       <div id="detalhesPokemon">
         <div className="imagem">
-          <div className="nomePokemon">{pokemon.nome}</div>{" "}
+          <div className="nomePokemon">{pokemon.name}</div>{" "}
           <img src={pokemon.imagem} alt="" />
         </div>
         <div id="colunadetalhes">

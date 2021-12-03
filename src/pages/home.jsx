@@ -12,6 +12,14 @@ const Home = () => {
   const [showModal, setOpenModal] = useState(false);
 
   useEffect(() => {
+    fetch("https://pokeapi.co/api/v2/pokemon/")
+      .then((r) => r.json())
+      .then((json) => {
+        addPokemon(json.results);
+      });
+  }, []);
+
+  useEffect(() => {
     sessionStorage.setItem("listPokemon", JSON.stringify(listaPokemons));
   }, [listaPokemons]);
 
@@ -61,7 +69,7 @@ const Home = () => {
             pokemon={pokemon}
             key={i}
             idpokemon={pokemon.id}
-            name={pokemon.nome}
+            name={pokemon.name}
             elemento={pokemon.elemento}
             imagem={pokemon.imagem}
             removerPokemon={() => removerPokemon(pokemon.id)}

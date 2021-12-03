@@ -7,6 +7,12 @@ const Modal = (props) => {
   useEffect(() => {
     document.getElementById("descricao").value = props.pokemon?.descricao || "";
   }, [props.pokemon]);
+  useEffect(() => {
+    document.getElementById("nome").value = props.pokemon?.nome || "";
+  }, [props.pokemon]);
+  useEffect(() => {
+    document.getElementById("elemento").value = props.pokemon?.elemento || "";
+  }, [props.pokemon]);
 
   return (
     <>
