@@ -1,28 +1,33 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 import "./card-pokemon.css";
 import iconeremover from "../../assets/images/icone-remover.png";
 import { Link } from "react-router-dom";
 import { getPokemon } from "../context/mycontext";
+import Pokebola from "../../assets/images/pokebola.png";
 
 const Cards = (props) => {
   const { setPokemons } = getPokemon();
   const path = "/pokemon/" + props.idpokemon;
+  
+  const [api, setApi] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${props.name}`)
+      .then((r) => r.json())
+      .then((json) => {
+        setApi(json);
+      });
+  }, []);
 
   return (
     <>
       <div className="cards" id={props.idpokemon}>
-        <button
-          id="removerpokemon"
-          className="iconeremover"
-          onClick={props.removerPokemon}
-        >
-          <img src={iconeremover} />
-        </button>
-        <Link to={path} onClick={() => setPokemons(props.pokemon)}>
+        <img className="pokebola" src={Pokebola} alt="" />
+        <Link to={path} onClick={() => setPokemons(api)}>
           <div className="conteudocards">
             <img
               className="pokemon"
-              src={props.imagem}
+              src={api ? api.sprites.other.dream_world.front_default : null}
               alt="imagem"
               width="100"
               height="100"
@@ -32,7 +37,11 @@ const Cards = (props) => {
               <h1> {props.name} </h1>
 
               <div className="elementos">
-                <span className="cor-elemento">{props.elemento}</span>
+                {api
+                  ? api.abilities.map((item) => (
+                      <span className="cor-elemento">{item.ability.name}</span>
+                    ))
+                  : null}
               </div>
             </div>
           </div>

@@ -71,7 +71,7 @@ const Home = () => {
             idpokemon={pokemon.id}
             name={pokemon.name}
             elemento={pokemon.elemento}
-            imagem={pokemon.imagem}
+            imagem={pokemon.url}
             removerPokemon={() => removerPokemon(pokemon.id)}
           ></Card>
         ))}
@@ -80,6 +80,7 @@ const Home = () => {
         <div className="cardvazio"></div>
         <div className="cardvazio"></div>
         <div className="cardvazio"></div>
+        
       </div>
       {showModal ? (
         <Modal

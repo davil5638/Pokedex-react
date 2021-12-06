@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
 
 .conteudo-modal {
@@ -123,6 +124,8 @@ label.custom-input {
 }
 
 /* Responsividade */
+
+
 
 @media screen and (max-width: 950px) {
   .conteudo-modal {
