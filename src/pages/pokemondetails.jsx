@@ -8,6 +8,8 @@ const Details = (props) => {
   const { pokemon } = getPokemon();
   const [showModal, setOpenModal] = useState(false);
 
+  console.log(pokemon)
+  
   return (
     <>
       <Navbar></Navbar>
@@ -21,8 +23,8 @@ const Details = (props) => {
       ) : null}
       <div id="detalhesPokemon">
         <div className="imagem">
-          <div className="nomePokemon">{pokemon.nome}</div>{" "}
-          <img src={pokemon.imagem} alt="" />
+          <div className="nomePokemon">{pokemon.name}</div>{" "}
+          <img src={pokemon.sprites.other.dream_world.front_default} alt="" />
         </div>
         <div id="colunadetalhes">
           <div className="descricao">
@@ -49,7 +51,7 @@ const Details = (props) => {
             <div className="coluna2">
               <div>
                 <p>
-                  Abilities <span>Overgrow</span>{" "}
+                  Id <span>132</span>{" "}
                 </p>
               </div>
               <div>
@@ -65,10 +67,12 @@ const Details = (props) => {
             </div>
           </div>
           <div className="type">
-            <h4>Type - </h4>
+            <h4>Abilities - </h4>
           </div>
           <div className="elementodetalhes">
-            <span className="textoelemento">{pokemon.elemento}</span>
+          {pokemon
+            ? pokemon.abilities.map((item) => <span className="textoelemento">{item.ability.name}</span>)
+            : null}
           </div>
         </div>
       </div>

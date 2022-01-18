@@ -65,6 +65,34 @@
 
 /* Responsividade */
 
+@media screen and (max-width: 1046px) {
+  #menu {
+    display: block;
+  }
+  .barra-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d-flex {
+    width: 80%;
+  }
+
+  #addnewpokemon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .botaonewpokemon {
+    width: 100%;
+  }
+
+  }
+
 @media screen and (max-width: 715px) {
   #menu {
     display: block;
